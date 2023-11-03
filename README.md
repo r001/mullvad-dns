@@ -10,15 +10,19 @@ The advantage to use Mullvad GUI over installing wireguard scripts is that it is
     `git clone https://github.com/r001/mullvad-dns.git`
 3. Install dependencies (**gawk**, **nftables**, **inotify-tools**) to the **mullvad-template-vm** either by yourself or by following the steps below **3./a - 3./d** by copying the **mullvad-dns-install-deps.sh** to the **mullvad-template-vm** and execute it there.  
 
-   **a.** In your **mullvad-vm**: `cd mullvad-dns && qvm-copy ./mullvad-dns-install-deps.sh` hit `<ENTER>`, and chose **mullvad-template-vm** from the list to copy to.  
+   **a.** In your **mullvad-vm**:  
+   `cd mullvad-dns && qvm-copy ./mullvad-dns-install-deps.sh`  
+   hit **ENTER**, and chose **mullvad-template-vm** from the list to copy to.  
 
-   **b.** In your **mullvad-template-vm**: `cd /home/user/QubesIncoming/<mullvad-vm> && ./mullvad-dns-install-deps.sh`  
+   **b.** In your **mullvad-template-vm**:  
+   `cd /home/user/QubesIncoming/<mullvad-vm> && ./mullvad-dns-install-deps.sh`  
+
    **c.** Shutdown **mullvad-template-vm**.  
 
    **d.** Restart **mullvad-vm**.  
 4. Install the scripts in your **mullvad-vm**. This will start dns auto updates, and make dns changes automatic between restarts.  
     `cd mullvad-dns`  
-    `./mullvad-dns-install.sh`
+    `./mullvad-dns-install.sh`  
 
 # Troubleshoot
 To make sure the newly installed dependencies are actually visible in the **mullvad-vm** you need to:

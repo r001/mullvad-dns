@@ -5,6 +5,9 @@ dest_dir="/home/user/.mullvad-dns"
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+# install dependencies to mullvad-vm so that it does not have to be restarted to operate
+. "$SCRIPT_DIR"/mullvad-dns-install-deps.sh
+
 echo "Creating directory $dest_dir"
 mkdir -p "$dest_dir"
 mkdir -p /home/user/.config/autostart
