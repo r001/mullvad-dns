@@ -5,7 +5,7 @@ Bash scripts to use Mullvad Vpn GUI as a vpn layer in Qubes os.
 1. We call your vm where mullvad gui is installed: **mullvad-vm** and its template vm: **mullvad-template-vm**.
 2. Clone this repo to your **mullvad-vm**.  
     `git clone https://github.com/r001/mullvad-dns.git`
-3. Install dependencies (**gawk**, **nftables**, **inotify-tools**) to the **mullvad-template-vm** either by yourself or copying the **mullvad-dns-install-deps.sh** to the **mullvad-template-vm** and execute it there.  
+3. Install dependencies (**gawk**, **nftables**, **inotify-tools**) to the **mullvad-template-vm** either by yourself or by following the steps below **3./a - 3./d** by copying the **mullvad-dns-install-deps.sh** to the **mullvad-template-vm** and execute it there.  
 
    **a.** In your **mullvad-vm**: `cd mullvad-dns && qvm-copy ./mullvad-dns-install-deps.sh` hit `<ENTER>`, and chose **mullvad-template-vm** from the list to copy to.  
 
