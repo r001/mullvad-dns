@@ -1,5 +1,5 @@
 # mullvad-dns
-Bash scripts to enable the GUI version of Mullvad Vpn to be used as a vpn layer in Qubes os.
+Bash scripts to enable the [GUI version of Mullvad Vpn](https://mullvad.net/en/help/install-mullvad-app-linux/) to be used as a vpn layer in [Qubes Os](https://www.qubes-os.org/).
 
 # Introduction
 The advantage to use Mullvad GUI over installing wireguard scripts is that it is much more flexible: you can easily change locations, enable and disable vpn using a nice GUI provided by [Mullvad](https:www.mullvad.net). The problem was until now, that dns just did not go through. Now it will.
@@ -19,6 +19,7 @@ The advantage to use Mullvad GUI over installing wireguard scripts is that it is
 4. Install the scripts in your **mullvad-vm**. This will start dns auto updates, and make dns changes automatic between restarts.  
     `cd mullvad-dns`  
     `./mullvad-dns-install.sh`
+
 # Troubleshoot
 To make sure the newly installed dependencies are actually visible in the **mullvad-vm** you need to:
 1. Shutdown **mullvad-template-vm** after installing dependencies, and 
@@ -43,4 +44,4 @@ The scripts were tested under Qubes 4.1.
 MIT
 
 # Credits
-Robert Horvath
+Robert Horvath (r001)
