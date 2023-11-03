@@ -1,10 +1,13 @@
 # mullvad-dns
+
 Bash scripts to enable the [GUI version of Mullvad Vpn](https://mullvad.net/en/help/install-mullvad-app-linux/) to be used as a vpn layer in [Qubes Os](https://www.qubes-os.org/).
 
 # Introduction
+
 The advantage to use Mullvad GUI over installing wireguard scripts is that it is much more flexible: you can easily change locations, enable and disable vpn using a nice GUI provided by [Mullvad](https:www.mullvad.net). The problem was until now, that dns just did not go through. Now it will.
 
 # Installation
+
 1. We call your vm where mullvad gui is installed: **mullvad-vm** and its template vm: **mullvad-template-vm**.
 2. Clone this repo to your **mullvad-vm**.  
     `git clone https://github.com/r001/mullvad-dns.git`
@@ -20,32 +23,39 @@ The advantage to use Mullvad GUI over installing wireguard scripts is that it is
    **c.** Shutdown **mullvad-template-vm**.  
 
    **d.** Restart **mullvad-vm**.  
+
 4. Install the scripts in your **mullvad-vm**. This will start dns auto updates, and make dns changes automatic between restarts.  
     `cd mullvad-dns`  
     `./mullvad-dns-install.sh`  
 
 # Troubleshoot
+
 To make sure the newly installed dependencies are actually visible in the **mullvad-vm** you need to:
 1. Shutdown **mullvad-template-vm** after installing dependencies, and 
 2. Restart **mullvad-vm** after **mullvad-template-vm** is shutdown.
 
 # Usage
-  Should work automatically when you stop and start the mullvad vpn connection. No interaction is needed.
-  If you want to start the dns update manually, you can do it in your **mullvad-vm** by executing:  
+
+Should work automatically when you stop and start the mullvad vpn connection. No interaction is needed.
+If you want to start the dns update manually, you can do it in your **mullvad-vm** by executing:  
   `/home/user/.mullvad-dns/mullvad-dns.sh &`  
   It will display when Mullvad is turned on or off.
 
 # Notes
-The scripts were tested under Qubes 4.1.
+
+The scripts were tested under Qubes 4.1. and with fedora-38 as **mullvad-template-vm**.
 
 # Uninstall
+
 1. In your **mullvad-vm**:   
     `rm ~/.config/autostart/mullvad-dns.desktop`  
     `rm ~/.mullvad-dns/mullvad-dns.sh`
 2. Restart **mullvad-vm**.
 
 # License
+
 MIT
 
 # Credits
+
 Robert Horvath (r001)
