@@ -16,9 +16,19 @@ Bash scripts to use Mullvad Vpn GUI as a vpn layer in Qubes os.
 4. Install the scripts in your **mullvad-vm**. This will start dns auto updates, and make dns changes automatic between restarts.  
     `cd mullvad-dns`  
     `./mullvad-dns-install.sh`
+# Troubleshoot
+To make sure the newly installed dependencies are actually visible in the **mullvad-vm** you need to:
+1. Shutdown **mullvad-template-vm** after installing dependencies, and 
+2. Restart **mullvad-vm** after **mullvad-template-vm** is shutdown.
 
 # Usage
-Should work automatically when you stop and start the mullvad vpn connection. No interaction is needed.
+  Should work automatically when you stop and start the mullvad vpn connection. No interaction is needed.
+  If you want to start the dns update manually, you can do it in your **mullvad-vm** by executing:  
+  `/home/user/.mullvad-dns/mullvad-dns.sh &`  
+  It will display when Mullvad is turned on or off.
+
+# Notes
+The scripts were tested under Qubes 4.1.
 
 # Uninstall
 1. In your **mullvad-vm**:   
