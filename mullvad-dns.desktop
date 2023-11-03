@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Mullvad Dns
+Exec=/home/user/.mullvad-dns/mullvad-dns.sh
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Network;
