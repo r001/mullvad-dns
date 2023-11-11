@@ -9,9 +9,10 @@ The advantage to use Mullvad GUI over installing wireguard scripts is its flexib
 # Prerequisities
 We call your vm where mullvad gui is installed: **mullvad-vm** and its template vm: **mullvad-template-vm**.
 Make sure that packages of `gawk`, `nftables`, and `inotify-tools` are installed in **mullvad-template-vm**. For the lazy the `mullvad-dns-install-deps.sh` will do this automatically for you on both Debian, and Fedora type systems. Make sure the packages above are available in **mullvad-vm** BEFORE you move on to actual installation. 
-1. Clone this repo to your **mullvad-vm**.  
+1. Install [GUI version of Mullvad Vpn](https://mullvad.net/en/help/install-mullvad-app-linux/).  
+2. Clone this repo to your **mullvad-vm**.  
     `git clone https://github.com/r001/mullvad-dns.git`
-2. Istall dependencies `gawk`, `nftables`, and `inotify-tools` in your **mullvad-template-vm**:  
+3. Istall dependencies `gawk`, `nftables`, and `inotify-tools` in your **mullvad-template-vm**:  
    **a.** In your **mullvad-vm**:  
    `cd mullvad-dns && qvm-copy ./mullvad-dns-install-deps.sh`  
    hit **ENTER**, and chose **mullvad-template-vm** from the list to copy to.  
