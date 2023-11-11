@@ -24,7 +24,7 @@ Make sure that packages of `gawk`, `nftables`, and `inotify-tools` are installed
    **d.** Restart **mullvad-vm**.  
 
 # Installation
-
+0. Make sure `gawk`, `nftables`, and `inotify-tools` are installed. See [Prerequisities](#prerequisities) above.  
 1. Clone this repo to your **mullvad-vm** (if you haven't done so already in previous steps):  
     `git clone https://github.com/r001/mullvad-dns.git`
 
@@ -58,7 +58,7 @@ The scripts were tested under Qubes 4.1. and with fedora-38 as **mullvad-templat
 
 # License
 
-MIT
+[MIT](./LICENSE.txt)
 
 # Credits
 
