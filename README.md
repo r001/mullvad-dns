@@ -2,7 +2,8 @@
 
 Bash scripts to enable the [GUI version of Mullvad Vpn](https://mullvad.net/en/help/install-mullvad-app-linux/) to be used as a vpn layer in [Qubes Os](https://www.qubes-os.org/).
 
-This version is tested with fedora-40 based mullvad-vm. (for fedora-38 based go to previous version.) 
+This version is tested with fedora-40 based mullvad-vm. (for fedora-38 based checkout v4.1.0 version by executing Installation step 0. and 1. then Troubleshoot -> Wrong Qubes version -> Resolution)
+
 
 # Introduction
 
@@ -62,7 +63,8 @@ Resolution:
     1. In your **mullvad-vm**  
     `cd`  
     `cd mullvad-dns`  
-    `git checkout v4.1.0`
+    `git checkout v4.1.0`  
+    `./mullvad-dns-install.sh`  
 
 ## VM behind **mullvad-vm** has no internet access
 
